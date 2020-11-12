@@ -119,7 +119,5 @@ def perceptionStep(Rover):
         # Rover.nav_angles = rover_centric_angles
     Rover.nav_dist = r
     Rover.nav_angles = theta 
- 
-    
-    
+   
     return Rover
