@@ -18,8 +18,8 @@ import matplotlib.image as mpimg
 import time
 
 # Import functions for perception and decision making
-from perception import perception_step
-from decision import decision_step
+from perception import perceptionStep
+from decision import decisionStep
 from supporting_functions import update_rover, create_output_images
 # Initialize socketio server and Flask application 
 # (learn more at: https://python-socketio.readthedocs.io/en/latest/)
@@ -109,8 +109,8 @@ def telemetry(sid, data):
         if np.isfinite(Rover.vel):
 
             # Execute the perception and decision steps to update the Rover's state
-            Rover = perception_step(Rover)
-            Rover = decision_step(Rover)
+            Rover = perceptionStep(Rover)
+            Rover = decisionStep(Rover)
 
             # Create output images to send to server
             out_image_string1, out_image_string2 = create_output_images(Rover)
